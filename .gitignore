@@ -1,0 +1,20 @@
+# Hugo
+archetypes/
+content/
+data/
+i18n/
+layouts/
+public/
+resources/
+static/
+themes/
+.hugo_build.lock
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+*.swp
+*.swo
+*~
