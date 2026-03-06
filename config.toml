@@ -1,0 +1,86 @@
+# -- 小说网站配置 --
+# 使用炫酷自定义主题 novel-cool
+
+baseURL = "https://baofule.github.io/md/"
+defaultContentLanguage = "zh-cn"
+hasCJKLanguage = true
+enableEmoji = true
+enableRobotsTXT = true
+summaryLength = 30
+
+# 使用PaperMod主题
+theme = "papermod"
+
+[pagination]
+  pagerSize = 20
+
+[imaging]
+  anchor = 'Center'
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[sitemap]
+  changefreq = 'weekly'
+  filename = 'sitemap.xml'
+  priority = 0.5
+
+[outputs]
+  home = ["HTML", "RSS"]
+
+# -- 网站参数 --
+[params]
+  description = "没钱修什么仙 - 一部搞笑修仙小说"
+  author = "baofule"
+  defaultTheme = "dark"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+
+# -- 菜单配置 --
+[[menu.main]]
+  identifier = "home"
+  name = "首页"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  identifier = "posts"
+  name = "章节"
+  url = "/posts/"
+  weight = 2
+
+[[menu.main]]
+  identifier = "categories"
+  name = "分卷"
+  url = "/categories/"
+  weight = 3
+
+[[menu.main]]
+  identifier = "tags"
+  name = "标签"
+  url = "/tags/"
+  weight = 4
+
+[[menu.main]]
+  identifier = "about"
+  name = "关于"
+  url = "/about/"
+  weight = 5
+
+# -- Markdown 配置 --
+[markup]
+  defaultMarkdownHandler = "goldmark"
+
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
+    style = "monokai"
